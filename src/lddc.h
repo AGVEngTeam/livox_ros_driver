@@ -22,10 +22,10 @@
 // SOFTWARE.
 //
 
-#ifndef LIVOX_ROS_DRIVER2_LDDC_H_
-#define LIVOX_ROS_DRIVER2_LDDC_H_
+#ifndef LIVOX_ros_driver_LDDC_H_
+#define LIVOX_ros_driver_LDDC_H_
 
-#include "include/livox_ros_driver2.h"
+#include "include/livox_ros_driver.h"
 
 #include "driver_node.h"
 #include "lds.h"
@@ -52,16 +52,16 @@ using Publisher = ros::Publisher;
 using PublisherPtr = ros::Publisher*;
 using PointCloud2 = sensor_msgs::PointCloud2;
 using PointField = sensor_msgs::PointField;
-using CustomMsg = livox_ros_driver2::CustomMsg;
-using CustomPoint = livox_ros_driver2::CustomPoint;
+using CustomMsg = livox_ros_driver::CustomMsg;
+using CustomPoint = livox_ros_driver::CustomPoint;
 using ImuMsg = sensor_msgs::Imu;
 #elif defined BUILDING_ROS2
 template <typename MessageT> using Publisher = rclcpp::Publisher<MessageT>;
 using PublisherPtr = std::shared_ptr<rclcpp::PublisherBase>;
 using PointCloud2 = sensor_msgs::msg::PointCloud2;
 using PointField = sensor_msgs::msg::PointField;
-using CustomMsg = livox_ros_driver2::msg::CustomMsg;
-using CustomPoint = livox_ros_driver2::msg::CustomPoint;
+using CustomMsg = livox_ros_driver::msg::CustomMsg;
+using CustomPoint = livox_ros_driver::msg::CustomPoint;
 using ImuMsg = sensor_msgs::msg::Imu;
 #endif
 
@@ -160,4 +160,4 @@ class Lddc final {
 
 }  // namespace livox_ros
 
-#endif // LIVOX_ROS_DRIVER2_LDDC_H_
+#endif // LIVOX_ros_driver_LDDC_H_
